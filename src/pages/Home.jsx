@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import "../css/MoviesGrid.css";
 
-const moviesUrl = import.meta.env.VITE_API;
-const apiKey = import.meta.env.VITE_API_KEY;
+const moviesUrl = process.env.VITE_API;
+const apiKey = process.env.VITE_API_KEY;
 
 function Home() {
   const [topMovies, setTopMovies] = useState([]);
@@ -17,6 +17,8 @@ function Home() {
 
   useEffect(() => {
     const topRatedUrl = `${moviesUrl}top_rated?${apiKey}`;
+
+    console.log(moviesUrl);
 
     getTopRatedMovies(topRatedUrl);
   }, []);

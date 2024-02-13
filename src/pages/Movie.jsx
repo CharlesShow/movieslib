@@ -10,8 +10,8 @@ import {
 
 import "../css/Movie.css";
 
-const moviesUrl = import.meta.env.VITE_API;
-const apiKey = import.meta.env.VITE_API_KEY;
+const moviesUrl = process.env.VITE_API;
+const apiKey = process.env.VITE_API_KEY;
 
 function Movie() {
   const { id } = useParams();
