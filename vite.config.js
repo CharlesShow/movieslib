@@ -8,11 +8,6 @@ dotenv.config({ path: envPath });
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: "./src",
-  define: { "process.env": process.env },
-  build: {
-    outDir: "../dist",
-    emptyOutDir: false,
-  },
+  server: { port: 5000 },
   base: "/movieslib",
 });

@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <nav id="navbar">
       <h2>
-        <Link to={"/movieslib"}>
+        <Link to={"/"}>
           <BiCameraMovie />
           MoviesLib
         </Link>

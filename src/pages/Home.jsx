@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import "../css/MoviesGrid.css";
 
-const moviesUrl = process.env.VITE_API;
-const apiKey = process.env.VITE_API_KEY;
+const moviesUrl = import.meta.env.VITE_API;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 function Home() {
   const [topMovies, setTopMovies] = useState([]);

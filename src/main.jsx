@@ -9,12 +9,12 @@ import Search from "./pages/Search.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route element={<App />}>
-          <Route path="/movieslib" element={<Home />} />
-          <Route path="movie/:id" element={<Movie />} />
-          <Route path="search" element={<Search />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:id" element={<Movie />} />
+          <Route path="/search" element={<Search />} />
         </Route>
       </Routes>
     </BrowserRouter>
